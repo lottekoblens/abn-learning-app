@@ -31,7 +31,7 @@ const usePersonStore = defineStore('person', {
       enabled: true,
       strategies: [
         {
-          paths: ['name', 'age'],
+          paths: ['name', 'age', 'state'],
         },
       ],
     },

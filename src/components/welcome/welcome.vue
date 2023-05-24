@@ -18,6 +18,7 @@
 <script>
 import usePersonStore from '../../stores/person';
 import { mapState, mapActions } from 'pinia';
+import useCounterStore from '../../stores/counter';
 
 export default {
     name: 'Welcome',
@@ -34,15 +35,18 @@ export default {
     ],
     methods: {
         submitName(){
-            console.log('Naam doorgegeven is :: ', this.name);
             this.setName(this.name);
         },
         ...mapActions(usePersonStore, {
             setName: 'setName',
             setState: 'setState'
         }),
+        ...mapActions(useCounterStore, {
+            setQuestion: 'setQuestion'
+        }),
         startQuestions(){
-            this.setState('question')
+            this.setState('question');
+            this.setQuestion(0);
         }
     }
 }
