@@ -74,11 +74,12 @@ export default {
     }
 
     .box { 
-        background: white;
+        background: linear-gradient(-135deg, transparent 40px, white 0) left top;
         padding: 1em;
         margin: auto;
         display: flex;
         padding-bottom: 3em;
+
     }
 
     .box h1 {
