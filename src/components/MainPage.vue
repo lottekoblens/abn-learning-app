@@ -1,6 +1,6 @@
 <template>
     <Header />
-  <div class="main">
+  <div class="main d-flex justify-center align-center">
     <Welcome v-if="state==='welcome'" />
     <Question v-if="state==='question'"/>
     <Shop v-if="state==='shop'"/>
@@ -28,8 +28,15 @@ export default {
 }
 </script>
 <style>
+main {
+  background-image: url('/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 .main {
     padding: 16px;
+    height: 80vh;
+    width: 100vw;
 }
 </style>

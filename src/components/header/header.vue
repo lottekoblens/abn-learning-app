@@ -1,7 +1,7 @@
 <template>
-  <div class="header d-flex pa-3">
-    <img width='48' height='48' src="https://img.freepik.com/premium-vector/golden-coins-set-flat-gold-icon-economy-finance-money-concept-wealth-symbol-vector-illustration-isol_144920-932.jpg?w=996" />
-    <p class="mt-auto mb-auto"> {{ coin }} Lotcoins</p>
+  <div class="header d-flex pa-3 justify-end">
+    <img  width='35' height='35' src="/coins.png" />
+    <p class="mt-auto mb-auto ml-2 font-weight-bold"> {{ coin }} coins</p>
   </div>
 </template>
 
@@ -17,7 +17,5 @@ export default {
 </script>
 
 <style>
-.header {
-    background-image: linear-gradient(to right, rgb(255, 255, 255) , rgb(0, 156, 3));
-}
+
 </style>
