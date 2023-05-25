@@ -24,10 +24,61 @@ const vragen = [
     {
         "id": 3,
         "title": "Welkom",
-        "question": "Weet je wat een hypotheek is?",
+        "question": "Laten we de zoektocht naar je huis beginnen! Ben je op zoek naar een huurhuis of een koophuis?",
+        "buttons": [
+            {
+                "text": "Huurhuis",
+            },
+            {
+                "text": "Koophuis"
+            }
+        ],
+        "inputType": "open",
+    }, 
+    {
+        "id": 4,
+        "title": "Inkomen",
+        "question": "Geef hier je inkomen op.",
+        "buttons": [
+            {
+                "text": "Opslaan",
+            }
+        ],
+        "inputType": "slider",
+    },
+    {
+        "id": 5,
+        "title": "Vraag 1",
+        "question": "Wat voor huis denk je dat je kan kopen met jouw inkomen?",
+        "buttons": [
+            {
+                "text": "1",
+            },
+            {
+                "text": "2"
+            }
+        ],
+    },
+    {
+        "id": 6,
+        "title": "Hypotheek",
+        "question": "Nu we weten welk werk je doet, kunnen we bepalen hoeveel je kunt lenen! Stel je hebt eigen spaargeld, namelijk €25.000. Zou je hier een deel van gebruiken voor je hypotheek?",
         "buttons": [
             {
                 "text": "Ja",
+            },
+            {
+                "text": "Nee"
+            }
+        ],
+    },
+    {
+        "id": 7,
+        "title": "Inkomen",
+        "question": "Geef hier je inkomen op.",
+        "buttons": [
+            {
+                "text": "Huurhuis",
                 "isAnswer": true,
                 "value": 30
             },

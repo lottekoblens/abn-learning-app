@@ -21,21 +21,24 @@ import {mapState} from 'pinia';
 import useCounterStore from '../../stores/counter';
 import { mapActions } from 'pinia';
 
+// const questions = useCounterStore();
+
 export default {
   name: 'Question',
   computed: {
     ...mapState(useCounterStore, {
       currentQuestion: 'getQuestion'
-    }, ['index'])
+    })
   },
   methods: {
+    ...mapActions(useCounterStore, {incrementIndex: 'increment'}),
     buttonClicked(){
-      this.setQuestion(1);
+      this.incrementIndex()
     },
-        ...mapActions(useCounterStore, {
-            setQuestion: 'setQuestion',
-            setState: 'setState'
-        }),
+    ...mapActions(useCounterStore, {
+        setQuestion: 'setQuestion',
+        setState: 'setState',
+    }),
   }
 }
 </script>
