@@ -24,7 +24,12 @@ const useCounterStore = defineStore('counter', {
       this.currentQuestion = index;
     },
     increment() {
-      this.currentQuestion++
+      this.currentQuestion++;
+    },
+    diminishment() {
+      if(this.currentQuestion > 0){
+      this.currentQuestion--;
+      }
     },
     addMoney(amount){
       this.money += amount;

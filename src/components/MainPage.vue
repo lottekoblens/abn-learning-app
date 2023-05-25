@@ -1,5 +1,5 @@
 <template>
-    <Header />
+    <Header v-if="state==='question'" />
   <div class="main d-flex justify-center align-center">
     <Welcome v-if="state==='welcome'" />
     <Question v-if="state==='question'"/>

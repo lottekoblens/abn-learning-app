@@ -4,9 +4,18 @@
     <hr>
     <h2> {{ currentQuestion.question }}</h2>
     <p v-if="currentQuestion.body"> {{ currentQuestion.body }}</p>
-    <!-- <img v-if="currentQuestion.images" src="{{ currentQuestion.images }}"> -->
+    <div v-if="currentQuestion.images.length > 0 && currentQuestion.images.length < 2">
+      <div v-for="image in currentQuestion.images">
+        <img class="image-big" v-bind:src="image.src">
+      </div>
+    </div>
+    <div v-else>
+      <div v-for="image in currentQuestion.images">
+        <img class="image-multiple" v-bind:src="image.src">
+      </div>
+    </div>
     <div v-if="currentQuestion.buttons">
-      <div  v-for="button in currentQuestion.buttons"  :key="button.text">
+      <div v-for="button in currentQuestion.buttons" :key="button.text">
         <button v-on:click="buttonClicked">
           {{  button.text }}
         </button>
@@ -21,8 +30,6 @@ import {mapState} from 'pinia';
 import useCounterStore from '../../stores/counter';
 import { mapActions } from 'pinia';
 
-// const questions = useCounterStore();
-
 export default {
   name: 'Question',
   computed: {
@@ -33,7 +40,7 @@ export default {
   methods: {
     ...mapActions(useCounterStore, {incrementIndex: 'increment'}),
     buttonClicked(){
-      this.incrementIndex()
+      this.incrementIndex();
     },
     ...mapActions(useCounterStore, {
         setQuestion: 'setQuestion',
@@ -41,8 +48,18 @@ export default {
     }),
   }
 }
+
+
 </script>
 
 <style>
+.image-big {
+  margin-top: 1em;
+  max-width: 100%;
+}
 
+.image-multiple {
+  margin-top: 1em;
+  max-width: 100%;
+}
 </style>

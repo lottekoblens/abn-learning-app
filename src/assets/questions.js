@@ -8,7 +8,11 @@ const vragen = [
                 "text": "Oke, duidelijk!",
             },
         ],
-        "images": "/quiz.jpg"
+        "images": [
+            {
+                'src' : '/quiz.jpg'
+            }
+        ]
     },
     {
         "id": 2,
@@ -18,6 +22,14 @@ const vragen = [
             {
                 "text": "Oke, duidelijk!",
             },
+        ],
+        "images": [
+            {
+                'src' : '/simulation.jpg'
+            },
+            {
+                'src' : '/simulation.jpg'
+            }
         ],
         "inputType": "slider"
     },
@@ -31,6 +43,14 @@ const vragen = [
             },
             {
                 "text": "Koophuis"
+            }
+        ],
+        "images": [
+            {
+                "src" : '/house-illustration.jpg'
+            }, 
+            {
+                "src" : '/house-illustration.jpg'
             }
         ],
         "inputType": "open",
