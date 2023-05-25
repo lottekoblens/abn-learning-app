@@ -79,7 +79,7 @@ export default {
         margin: auto;
         display: flex;
         padding-bottom: 3em;
-
+        flex-direction: column;
     }
 
     .box h1 {
@@ -100,7 +100,7 @@ export default {
     button {
         border-radius: 2em;
         background: #7FCCAB;
-        padding: 0.5em;
+        padding: 0.75em;
         width: 100%;
         color: white;
         margin-top: 1em;

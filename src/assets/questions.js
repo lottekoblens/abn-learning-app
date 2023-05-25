@@ -1,15 +1,14 @@
 const vragen = [
     {
         "id": 1,
-        "question": "Hoe heet je?",
+        "title": "Welkom",
+        "question": "Tijdens het zoeken naar een huis zul je vragen moeten beantwoorden. Met deze vragen kun je coins verdienen. Hoe meer coins je hebt, hoe hoger je op het scorebord komt te staan!",
         "buttons": [
             {
-                "text": "Je mag me alles noemen",
-                "isAnswer": true,
-                "value": 30
+                "text": "Oke, duidelijk!",
             },
         ],
-        "inputType": "open"
+        "images": "/quiz.jpg"
     },
     {
         "id": 2,
@@ -28,7 +27,8 @@ const vragen = [
             {
                 "text": "Nee"
             }
-        ]
+        ],
+        "inputType": "open",
     }
 ]
 
