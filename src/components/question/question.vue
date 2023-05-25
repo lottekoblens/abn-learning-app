@@ -6,9 +6,11 @@
     <p v-if="currentQuestion.body"> {{ currentQuestion.body }}</p>
     <!-- <img v-if="currentQuestion.images" src="{{ currentQuestion.images }}"> -->
     <div v-if="currentQuestion.buttons">
-      <button v-for="button in currentQuestion.buttons" :key="button.text" v-on:click="buttonClicked">
-        {{  button.text }}
-      </button>
+      <div  v-for="button in currentQuestion.buttons"  :key="button.text">
+        <button v-on:click="buttonClicked">
+          {{  button.text }}
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -24,12 +26,11 @@ export default {
   computed: {
     ...mapState(useCounterStore, {
       currentQuestion: 'getQuestion'
-    })
+    }, ['index'])
   },
-  method: {
+  methods: {
     buttonClicked(){
-      console.log('test')
-      this.setQuestion(currentQuestion++);
+      this.setQuestion(1);
     },
         ...mapActions(useCounterStore, {
             setQuestion: 'setQuestion',
