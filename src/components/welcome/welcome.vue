@@ -59,6 +59,7 @@ export default {
 
     body{
         font-family: 'Roboto', sans-serif;
+        overflow-y: scroll;
     }
 
     .main { 
@@ -80,6 +81,7 @@ export default {
         display: flex;
         padding-bottom: 3em;
         flex-direction: column;
+        min-width: 100%;
     }
 
     .box h1 {
@@ -95,6 +97,15 @@ export default {
         padding: 0.5em;
         width: 100%;
         margin-top: 1em;
+    }
+
+    input[type="range"] {
+        padding: 0;
+    }
+
+    .slider {
+        background: #7FCCAB;
+        color: #7FCCAB;
     }
 
     button {

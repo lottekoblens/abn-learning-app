@@ -26,12 +26,8 @@ const vragen = [
         "images": [
             {
                 'src' : '/simulation.jpg'
-            },
-            {
-                'src' : '/simulation.jpg'
             }
         ],
-        "inputType": "slider"
     },
     {
         "id": 3,
@@ -48,9 +44,6 @@ const vragen = [
         "images": [
             {
                 "src" : '/house-illustration.jpg'
-            }, 
-            {
-                "src" : '/house-illustration.jpg'
             }
         ],
         "inputType": "open",
@@ -58,7 +51,7 @@ const vragen = [
     {
         "id": 4,
         "title": "Inkomen",
-        "question": "Geef hier je inkomen op.",
+        "question": "Wat verdien je per maand?",
         "buttons": [
             {
                 "text": "Opslaan",
@@ -72,10 +65,28 @@ const vragen = [
         "question": "Wat voor huis denk je dat je kan kopen met jouw inkomen?",
         "buttons": [
             {
-                "text": "1",
+                "text": "",
+                "image": "/house1.png"
             },
             {
-                "text": "2"
+                "text": "",
+                "image": "/house2.png"
+            },
+            {
+                "text": "",
+                "image": "/house3.png"
+            },
+            {
+                "text": "",
+                "image": "/house4.png"
+            },
+            {
+                "text": "",
+                "image": "/house5.png"
+            },
+            {
+                "text": "",
+                "image": "/house6.png"
             }
         ],
     },
@@ -91,9 +102,167 @@ const vragen = [
                 "text": "Nee"
             }
         ],
+        "images": [
+            {
+                "src" : '/spaarvarken.png'
+            }
+        ],
     },
     {
         "id": 7,
+        "title": "Vraag 2",
+        "question": "Welke zaken zorgen ervoor dat je een lagere hypotheek kunt krijgen?",
+        "buttons": [
+            {
+                "text": "Antwoorden opslaan",
+            }
+        ],
+        "inputType": "checkbox",
+        "inputs": [
+            {
+                "icon": "/studieschuld.png",
+                "text": "Studieschuld",
+                "isAnswer": true,
+                "value": 15
+            },
+            {
+                "icon": "/telefoonabonnement.png",
+                "text": "Telefoonabonnement",
+                "isAnswer": true,
+                "value": 15
+            },
+            {
+                "icon": "/scooter.png",
+                "text": "Scooter",
+                "isAnswer": false,
+                "value": 0
+            },
+            {
+                "icon": "/car.png",
+                "text": "Private lease auto",
+                "isAnswer": true,
+                "value": 15
+            },
+            {
+                "icon": "/leningen.png",
+                "text": "Leningen",
+                "isAnswer": true,
+                "value": 15
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Antwoord",
+        "question": "Welke zaken zorgen ervoor dat je een lagere hypotheek kunt krijgen?",
+        "buttons": [
+            {
+                "text": "Verder"
+            }
+        ],
+        "answers": [
+            {
+                "icon": "/studieschuld.png",
+                "text": "Studieschuld",
+                "isAnswer": true
+            },
+            {
+                "icon": "/telefoonabonnement.png",
+                "text": "Telefoonabonnement",
+                "isAnswer": true
+            },
+            {
+                "icon": "/scooter.png",
+                "text": "Scooter",
+                "isAnswer": true
+            },
+            {
+                "icon": "/car.png",
+                "text": "Private lease auto",
+                "isAnswer": true
+            },
+            {
+                "icon": "/leningen.png",
+                "text": "Leningen",
+                "isAnswer": true
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Hypotheek",
+        "question": "Heb je zelf schulden of een vorm van een lening?",
+        "buttons": [
+            {
+                "text": "Volgende"
+            }
+        ],
+        "inputs": [
+            {
+                "icon": "/studieschuld.png",
+                "text": "Studieschuld"
+            },
+            {
+                "icon": "/telefoonabonnement.png",
+                "text": "Telefoonabonnement"
+            },
+            {
+                "icon": "/car.png",
+                "text": "Private lease auto"
+            },
+            {
+                "icon": "/leningen.png",
+                "text": "Leningen"
+            }
+        ],
+        "inputType": "checkbox",
+    },
+    {
+        "id": 10,
+        "title": "Hypotheek",
+        "question": "Hoeveel denk je per maand te moeten betalen voor de schulden en leningen?",
+        "buttons": [
+            {
+                "text": "Opslaan"
+            }
+        ],
+        "inputType": "open",
+        "placeholder": "Voer hier het bedrag in"
+    },
+    {
+        "id": 11,
+        "title": "Inkomen",
+        "question": "Geef hier je inkomen op.",
+        "buttons": [
+            {
+                "text": "Huurhuis",
+                "isAnswer": true,
+                "value": 30
+            },
+            {
+                "text": "Nee"
+            }
+        ],
+        "inputType": "open",
+    },
+    {
+        "id": 11,
+        "title": "Inkomen",
+        "question": "Geef hier je inkomen op.",
+        "buttons": [
+            {
+                "text": "Huurhuis",
+                "isAnswer": true,
+                "value": 30
+            },
+            {
+                "text": "Nee"
+            }
+        ],
+        "inputType": "open",
+    },
+    {
+        "id": 11,
         "title": "Inkomen",
         "question": "Geef hier je inkomen op.",
         "buttons": [

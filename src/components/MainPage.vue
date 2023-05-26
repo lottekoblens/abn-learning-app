@@ -36,7 +36,7 @@ main {
 
 .main {
     padding: 16px;
-    height: 80vh;
+    min-height: 80vh;
     width: 100vw;
 }
 </style>
