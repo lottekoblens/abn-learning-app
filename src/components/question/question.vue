@@ -22,13 +22,15 @@
       <input type="range" min="1000" max="5000" value="1000"  class="slider" id="myRange">
       <p><strong>Inkomen:</strong> <span id="value"></span></p>
     </div>
-    <div v-show="currentQuestion.inputType === 'checkbox'" v-for="input in currentQuestion.inputs" class="answers">
-      <input type="checkbox" id="answers" name="answers">
-      <img class="icon" v-bind:src="input.icon"> 
-      <label for="answers">{{ input.text }}</label>
+    <div class="answer-box" v-if="currentQuestion.inputType === 'checkbox'">
+      <div v-for="input in currentQuestion.inputs" class="answers">
+        <input type="checkbox" id="answers" name="answers">
+        <img class="icon" v-bind:src="input.icon"> 
+        <label for="answers">{{ input.text }}</label>
+      </div>
     </div>
-    <div v-if="currentQuestion.inputType === 'open'" v-bind:placeholder="currentQuestion.placeholder">
-      <input type="text">
+    <div v-if="currentQuestion.inputType === 'open'">
+      <input type="text" v-bind:placeholder="currentQuestion.placeholder">
     </div>
     <div v-if="currentQuestion.answers" v-for="answer in currentQuestion.answers" class="answers">
       <img class="icon" v-bind:src="answer.icon">
@@ -36,7 +38,7 @@
     </div>
     <div v-if="currentQuestion.buttons">
       <div v-for="button in currentQuestion.buttons" :key="button.text">
-        <button v-on:click="buttonClicked">
+        <button v-on:click="invokeFunction(button.buttonClicked)">
           {{  button.text }}
           <img v-if="button.image" v-bind:src="button.image">
         </button>
@@ -59,14 +61,20 @@ export default {
     })
   },
   methods: {
+    invokeFunction(functionName) {
+        this[functionName]();
+    },
     ...mapActions(useCounterStore, {incrementIndex: 'increment'}),
     buttonClicked(){
       this.incrementIndex();
     },
+    getScore(){
+      this.setState('score');
+    },
     ...mapActions(useCounterStore, {
         setQuestion: 'setQuestion',
         setState: 'setState',
-    }),
+    })
   }
 }
 
@@ -102,8 +110,13 @@ document.addEventListener("DOMContentLoaded", function () {
   justify-content: center;
 }
 
-.answers {
+.answer-box {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+}
+
+.answers {
+  /* display: flex;
+  flex-direction: row; */
 }
 </style>

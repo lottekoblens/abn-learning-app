@@ -3,6 +3,7 @@
   <div class="main d-flex justify-center align-center">
     <Welcome v-if="state==='welcome'" />
     <Question v-if="state==='question'"/>
+    <Scorebord v-if="state==='score'" />
     <Shop v-if="state==='shop'"/>
   </div>
 </template>
@@ -10,6 +11,7 @@
 import Header from './header/header.vue'
 import Welcome from './welcome/welcome.vue'
 import Question from './question/question.vue';
+import Scorebord from './scorebord/scorebord.vue';
 import { mapState } from 'pinia';
 import usePersonStore from '../stores/person';
 
@@ -17,7 +19,8 @@ export default {
   components: {
     Header,
     Welcome,
-    Question
+    Question,
+    Scorebord
   },
   computed: {
     ...mapState(usePersonStore, {
