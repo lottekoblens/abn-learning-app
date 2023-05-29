@@ -1,9 +1,9 @@
 <template>
-  <div class="header d-flex pa-3 justify-space-between">
+  <div class="header d-flex pa-4 justify-space-between">
     <button class="back-button" v-on:click="backButtonClicked"><img src="/arrow.png"></button>
       <div class="d-flex align-center">
         <img  width='35' height='35' src="/coins.png" />
-        <p class="mt-auto mb-auto ml-2 font-weight-bold"> {{ coin }} coins</p>
+        <p class="mt-auto mb-auto ml-2 font-weight-bold"> {{money}} coins</p>
       </div>
   </div>
 </template>
@@ -15,15 +15,14 @@ import { mapActions } from 'pinia';
 
 export default {
   name: 'Header',
-    data: ()=>{
-        return {
-            coin: 0
-        }
-    },
   computed: {
     ...mapState(useCounterStore, {
-      currentQuestion: 'getQuestion'
+      currentQuestion: 'getQuestion',
+      money: 'getMoney'
     })
+  },
+  getters: {
+    getMoney: (state) => state.money,
   },
   methods: {
     ...mapActions(useCounterStore, {diminishIndex: 'diminishment'}),

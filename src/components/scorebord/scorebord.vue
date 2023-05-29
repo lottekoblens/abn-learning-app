@@ -32,12 +32,22 @@ export default {
 
 <style>
     .scorebord {
+        width: 100%;
+        position: absolute;
+        top: 0;
+    }
 
+    .scorebord h1 {
+        text-align: center;
+        text-transform: uppercase;
+        color: #7FC7A0;
     }
 
     .top-score {
-        background: #237652;
+        padding-top: 1em;
+        /* background: #237652; */
         height: 40vh;
         width: 100%;
+        background: linear-gradient(45deg, transparent 20px, #237652 0);
     }
 </style>

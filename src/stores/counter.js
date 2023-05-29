@@ -3,7 +3,7 @@ import {vragen} from '../assets/questions';
 
 const useCounterStore = defineStore('counter', {
   state: () => ({
-    money: 0,
+    money: 100,
     currentQuestion: null,
     questions: vragen
   }),

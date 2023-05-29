@@ -114,9 +114,4 @@ document.addEventListener("DOMContentLoaded", function () {
   display: flex;
   flex-direction: column;
 }
-
-.answers {
-  /* display: flex;
-  flex-direction: row; */
-}
 </style>

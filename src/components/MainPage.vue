@@ -6,12 +6,14 @@
     <Scorebord v-if="state==='score'" />
     <Shop v-if="state==='shop'"/>
   </div>
+  <Footer v-if="state==='question'" />
 </template>
 <script>
 import Header from './header/header.vue'
 import Welcome from './welcome/welcome.vue'
 import Question from './question/question.vue';
 import Scorebord from './scorebord/scorebord.vue';
+import Footer from './footer/footer.vue';
 import { mapState } from 'pinia';
 import usePersonStore from '../stores/person';
 
@@ -20,7 +22,8 @@ export default {
     Header,
     Welcome,
     Question,
-    Scorebord
+    Scorebord,
+    Footer
   },
   computed: {
     ...mapState(usePersonStore, {
