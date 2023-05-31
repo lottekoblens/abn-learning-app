@@ -18,7 +18,7 @@ const vragen = [
     {
         "id": 2,
         "title": "Welkom",
-        "question": "Bij het gebruik van deze applicatie zul je het proces doorlopen van het huren of kopen van een huis. Dit kun je zien als een soort van simulatie. Het lijkt dus alsof het allemaal echt is wat je moet doen, maar dat is het niet. Wees dus niet bang om het proces te doorlopen en in te vullen wat jij denkt dat goed is.",
+        "question": "Bij het gebruik van deze applicatie zul je het proces doorlopen van het huren of kopen van een huis. Dit kun je zien als een soort van <strong>simulatie</strong>. Het lijkt dus alsof het allemaal echt is wat je moet doen, maar dat is het niet. Wees dus <strong>niet bang</strong> om het proces te doorlopen en in te vullen wat jij denkt dat goed is.",
         "buttons": [
             {
                 "text": "Oke, duidelijk!",
@@ -34,7 +34,7 @@ const vragen = [
     {
         "id": 3,
         "title": "Welkom",
-        "question": "Laten we de zoektocht naar je huis beginnen! Ben je op zoek naar een huurhuis of een koophuis?",
+        "question": "Laten we de zoektocht naar je huis beginnen! Ben je op zoek naar een <strong>huurhuis</strong> of een <strong>koophuis?</strong>",
         "buttons": [
             {
                 "text": "Huurhuis",
@@ -66,7 +66,7 @@ const vragen = [
     {
         "id": 5,
         "title": "Vraag 1",
-        "question": "Wat voor huis denk je dat je kan kopen met jouw inkomen?",
+        "question": "Wat voor huis denk je dat je kan kopen met jouw <strong>salaris</strong>?",
         "buttons": [
             {
                 "text": "",
@@ -103,7 +103,7 @@ const vragen = [
     {
         "id": 6,
         "title": "Hypotheek",
-        "question": "Nu we weten welk werk je doet, kunnen we bepalen hoeveel je kunt lenen! Stel je hebt eigen spaargeld, namelijk €25.000. Zou je hier een deel van gebruiken voor je hypotheek?",
+        "question": "Nu we weten welk werk je doet, kunnen we bepalen hoeveel je kunt lenen! Stel je hebt eigen spaargeld, namelijk <strong>€25.000</strong>. Zou je hier een deel van gebruiken voor je hypotheek?",
         "buttons": [
             {
                 "text": "Ja",
@@ -123,7 +123,7 @@ const vragen = [
     {
         "id": 7,
         "title": "Vraag 2",
-        "question": "Welke zaken zorgen ervoor dat je een lagere hypotheek kunt krijgen?",
+        "question": "Welke zaken zorgen ervoor dat je een <strong>lagere hypotheek</strong> kunt krijgen?",
         "buttons": [
             {
                 "text": "Antwoorden opslaan",
@@ -167,7 +167,7 @@ const vragen = [
     {
         "id": 8,
         "title": "Antwoord",
-        "question": "Welke zaken zorgen ervoor dat je een lagere hypotheek kunt krijgen?",
+        "question": "Welke zaken zorgen ervoor dat je een <strong>lagere hypotheek</strong> kunt krijgen?",
         "buttons": [
             {
                 "text": "Verder",
@@ -205,7 +205,7 @@ const vragen = [
     {
         "id": 9,
         "title": "Hypotheek",
-        "question": "Heb je zelf schulden of een vorm van een lening?",
+        "question": "Heb je zelf <strong>schulden</strong> of een vorm van een <strong>lening</strong>?",
         "buttons": [
             {
                 "text": "Volgende",
@@ -248,7 +248,7 @@ const vragen = [
     {
         "id": 11,
         "title": "Hypotheek",
-        "question": "De hypotheekadviseur van de bank geeft aan dat je een hypotheek kunt krijgen van €350.000. Zonder schulden en leningen had je een hypotheek kunnen krijgen van €370.000.",
+        "question": "De hypotheekadviseur van de bank geeft aan dat je een hypotheek kunt krijgen van <strong>€350.000</strong>. Zonder schulden en leningen had je een hypotheek kunnen krijgen van €370.000.",
         "buttons": [
             {
                 "text": "Super!",
@@ -290,7 +290,7 @@ const vragen = [
     {
         "id": 13,
         "title": "Bieden",
-        "question": "Wat is de hoogte van het bod dat je gaat doen?",
+        "question": "Wat is de hoogte van <strong>het bod</strong> dat je gaat doen?",
         "buttons": [
             {
                 "text": "Bieden",
@@ -303,7 +303,7 @@ const vragen = [
     {
         "id": 14,
         "title": "Vraag 3",
-        "question": "Welke kosten heb je nog meer als koper van een huis?",
+        "question": "Welke <strong>kosten</strong> heb je nog meer als <strong>koper</strong> van een huis?",
         "buttons": [
             {
                 "text": "Antwoorden opslaan",
@@ -342,33 +342,11 @@ const vragen = [
     {
         "id": 15,
         "title": "Antwoord",
-        "question": "Als koper van een huis heb je veel kosten die je nog moet maken.",
+        "question": "Als koper van een huis heb je veel kosten die je nog moet maken. Alle antwoorden waren dus juist!",
         "buttons": [
             {
                 "text": "Ga verder",
                 "buttonClicked": "incrementCurrentQuestion"
-            }
-        ],
-        "answers": [
-            {
-                "text": "Studieschuld",
-                "isAnswer": true
-            },
-            {
-                "text": "Telefoonabonnement",
-                "isAnswer": true
-            },
-            {
-                "text": "Scooter",
-                "isAnswer": true
-            },
-            {
-                "text": "Private lease auto",
-                "isAnswer": true
-            },
-            {
-                "text": "Leningen",
-                "isAnswer": true
             }
         ]
     },

@@ -24,7 +24,7 @@
     </div>
     <div class="answer-box" v-if="currentQuestion.inputType === 'checkbox'">
       <div v-for="input in currentQuestion.inputs" class="answers d-flex flex-row justify-start">
-          <input type="checkbox" v-model="checkboxes[input.text]" id="answers" name="answers">
+          <input type="checkbox" v-model="checkboxes[input.text]" v-on:click="checkAnswer(input.value, input.text)" id="answers" name="answers">
           <img class="icon" v-bind:src="input.icon"> 
           <label for="answers">{{ input.text }}</label>
       </div>
@@ -32,10 +32,12 @@
     <div v-if="currentQuestion.inputType === 'open'">
       <input type="text" class="openInput" v-bind:placeholder="currentQuestion.placeholder">
     </div>
-    <div v-if="currentQuestion.answers" v-for="answer in currentQuestion.answers" class="answers">
-      <img class="icon" v-bind:src="answer.icon">
-      <p>{{ answer.text }}</p>
-    </div>
+    <div class="answer-box" v-if="currentQuestion.answers">
+      <div v-for="answer in currentQuestion.answers" class="answers">
+        <img class="icon" v-bind:src="answer.icon">
+        <p>{{ answer.text }}</p>
+      </div>
+  </div>
     <div v-if="currentQuestion.buttons">
       <div v-for="button in currentQuestion.buttons" :key="button.text">
         <button v-on:click="invokeFunction(button.buttonClicked, button.value)">
@@ -84,12 +86,25 @@ export default {
       this.addCoins(value)
     },
     checkboxCheck(value) {
-      console.log(this.checkboxes);
       this.incrementIndex();
       this.addCoins(value);
     },
     getScore(){
       this.setState('score');
+    },
+    checkAnswer(value, text) {
+      let coins = 0
+      const checkboxes = this.checkboxes
+      for(const property in checkboxes) {
+        if(text === `${property}`) {
+          console.log('text', `${checkboxes[property]}`)
+          if(`${checkboxes[property]}` !== true) {
+            console.log(value)
+            return coins += value
+          }
+        }
+    }
+      console.log(coins, 'coins')
     },
     ...mapActions(usePersonStore, {
             setState: 'setState'
@@ -126,10 +141,22 @@ export default {
 
 .icon {
   height: 18px;
-  padding: 0 1em;
+  padding-right: 1em;
+}
+
+#answers {
+  margin-right: 1em;
 }
 
 .answers {
   margin-bottom: 0.2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.slider {
+  width: 100%;
+  margin-top: 1em;
 }
 </style>
