@@ -11,7 +11,7 @@
             <hr>
             <h2> Hi, ik ben Lisa jouw persoonlijke assistent.</h2>
             <p> Geef hier je naam op en we kunnen beginnen!</p>
-            <input type="text" v-model="name" placeholder="Voer hier je naam" />
+            <input type="text" class="openInput" v-model="name" placeholder="Voer hier je naam" />
             <button v-on:click="submitName"> Opslaan </button>
         </div>
     </div>  
@@ -92,7 +92,7 @@ export default {
         margin-top: -0.3em;
     }
 
-    input {
+    .openInput {
         border-radius: 2em;
         border: 1px solid black;
         padding: 0.5em;

@@ -2,7 +2,7 @@ const vragen = [
     {
         "id": 1,
         "title": "Welkom",
-        "question": "Tijdens het zoeken naar een huis zul je vragen moeten beantwoorden. Met deze vragen kun je coins verdienen. Hoe meer coins je hebt, hoe hoger je op het scorebord komt te staan!",
+        "question": "Tijdens het zoeken naar een huis zul je vragen moeten beantwoorden. Met deze vragen kun je <strong>coins</strong> verdienen. Hoe meer coins je hebt, hoe hoger je op het scorebord komt te staan!",
         "buttons": [
             {
                 "text": "Oke, duidelijk!",
@@ -307,7 +307,7 @@ const vragen = [
         "buttons": [
             {
                 "text": "Antwoorden opslaan",
-                "buttonClicked": "incrementCurrentQuestion"
+                "buttonClicked": "checkboxCheck"
             }
         ],
         "inputs": [

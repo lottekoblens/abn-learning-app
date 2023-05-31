@@ -2,7 +2,7 @@
   <div v-if="!!currentQuestion" class="box">
     <h1>{{ currentQuestion.title }}</h1>
     <hr>
-    <h2> {{ currentQuestion.question }}</h2>
+    <h2 v-html="question"></h2>
     <p v-if="currentQuestion.body"> {{ currentQuestion.body }}</p>
     <div v-if="currentQuestion.images">
       <div v-if="currentQuestion.images.length > 0 && currentQuestion.images.length < 2">
@@ -19,18 +19,18 @@
       </div>
     </div>
     <div v-show="currentQuestion.inputType === 'slider'">
-      <input type="range" min="1000" max="5000" value="1000"  class="slider" id="myRange">
-      <p><strong>Inkomen:</strong> <span id="value"></span> per maand</p>
+      <input type="range" min="1000" max="5000" v-model="salary" class="slider" id="myRange">
+      <p><strong>Inkomen:</strong> <span>{{ salary }}</span> per maand</p>
     </div>
     <div class="answer-box" v-if="currentQuestion.inputType === 'checkbox'">
-      <div v-for="input in currentQuestion.inputs" class="answers">
-          <input type="checkbox" id="answers" name="answers">
+      <div v-for="input in currentQuestion.inputs" class="answers d-flex flex-row justify-start">
+          <input type="checkbox" v-model="checkboxes[input.text]" id="answers" name="answers">
           <img class="icon" v-bind:src="input.icon"> 
           <label for="answers">{{ input.text }}</label>
       </div>
     </div>
     <div v-if="currentQuestion.inputType === 'open'">
-      <input type="text" v-bind:placeholder="currentQuestion.placeholder">
+      <input type="text" class="openInput" v-bind:placeholder="currentQuestion.placeholder">
     </div>
     <div v-if="currentQuestion.answers" v-for="answer in currentQuestion.answers" class="answers">
       <img class="icon" v-bind:src="answer.icon">
@@ -56,10 +56,19 @@ import { mapActions } from 'pinia';
 
 export default {
   name: 'Question',
+  data() {
+    return {
+      salary : 1000,
+      checkboxes: {}
+    }
+  },
   computed: {
     ...mapState(useCounterStore, {
       currentQuestion: 'getQuestion'
-    })
+    }),
+    question(){
+      return this.currentQuestion.question;
+    }
   },
   methods: {
     invokeFunction(functionName, value) {
@@ -74,6 +83,11 @@ export default {
       this.incrementTwo();
       this.addCoins(value)
     },
+    checkboxCheck(value) {
+      console.log(this.checkboxes);
+      this.incrementIndex();
+      this.addCoins(value);
+    },
     getScore(){
       this.setState('score');
     },
@@ -85,19 +99,6 @@ export default {
     })
   }
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-  const slider = document.getElementById("myRange");
-  const output = document.getElementById("value");
-
-  if (slider) {
-    output.innerHTML = slider.value;
-    slider.oninput = function() {
-      output.innerHTML = this.value;
-    }
-  }
-})
-
 </script>
 
 <style>
@@ -120,5 +121,15 @@ document.addEventListener("DOMContentLoaded", function () {
 .answer-box {
   display: flex;
   flex-direction: column;
+  margin-top: 0.5em;
+}
+
+.icon {
+  height: 18px;
+  padding: 0 1em;
+}
+
+.answers {
+  margin-bottom: 0.2em;
 }
 </style>
