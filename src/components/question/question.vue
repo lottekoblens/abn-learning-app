@@ -20,7 +20,7 @@
     </div>
     <div v-show="currentQuestion.inputType === 'slider'">
       <input type="range" min="1000" max="5000" value="1000"  class="slider" id="myRange">
-      <p><strong>Inkomen:</strong> <span id="value"></span></p>
+      <p><strong>Inkomen:</strong> <span id="value"></span> per maand</p>
     </div>
     <div class="answer-box" v-if="currentQuestion.inputType === 'checkbox'">
       <div v-for="input in currentQuestion.inputs" class="answers">
@@ -51,6 +51,7 @@
 
 import {mapState} from 'pinia';
 import useCounterStore from '../../stores/counter';
+import usePersonStore from '../../stores/person';
 import { mapActions } from 'pinia';
 
 export default {
@@ -76,9 +77,11 @@ export default {
     getScore(){
       this.setState('score');
     },
+    ...mapActions(usePersonStore, {
+            setState: 'setState'
+    }),
     ...mapActions(useCounterStore, {
         setQuestion: 'setQuestion',
-        setState: 'setState',
     })
   }
 }

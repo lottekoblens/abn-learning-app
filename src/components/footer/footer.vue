@@ -1,22 +1,33 @@
 <template>
     <div class="footer d-flex justify-space-between">
-        <button class="back-button"><img src="/home-icon.png"></button>
+        <button class="back-button" v-on:click="goToHomepage"><img src="/home-icon.png"></button>
         <button class="back-button"><img src="/chat-icon.png"></button>
     </div>
 </template>
   
-  <script>
-  export default {
-    name: 'Footer'
-  }
-  </script>
-  
-  <style>
-  .footer {
-     padding: 0 1em 1em 1em; 
-  }
+<script>
+import usePersonStore from '../../stores/person';
+import { mapActions } from 'pinia';
 
-  .back-button {
+export default {
+    name: 'Footer',
+    methods: {
+        goToHomepage(){
+            this.setState('home');
+        },
+        ...mapActions(usePersonStore, {
+            setState: 'setState'
+        }),
+    }
+}
+</script>
+  
+<style>
+    .footer {
+        padding: 0 1em 1em 1em; 
+    }
+
+    .back-button {
     background: white;
     color: #7FCCAB;
     width: fit-content;
@@ -28,5 +39,5 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  </style>
+    }
+</style>

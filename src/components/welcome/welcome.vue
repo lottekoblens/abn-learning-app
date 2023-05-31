@@ -82,6 +82,7 @@ export default {
         padding-bottom: 3em;
         flex-direction: column;
         min-width: 100%;
+        box-shadow: 0 0 8px 0 rgba(34, 34, 34, .02), 0 8px 16px 0 rgba(34, 34, 34, .2);
     }
 
     .box h1 {
@@ -116,6 +117,7 @@ export default {
         color: white;
         margin-top: 1em;
         font-weight: 500;
+        box-shadow: 0 0 8px 0 rgba(34, 34, 34, .02), 0 8px 16px 0 rgba(34, 34, 34, .2);
     }
 
     h2 {
