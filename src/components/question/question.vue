@@ -24,9 +24,9 @@
     </div>
     <div class="answer-box" v-if="currentQuestion.inputType === 'checkbox'">
       <div v-for="input in currentQuestion.inputs" class="answers">
-        <input type="checkbox" id="answers" name="answers">
-        <img class="icon" v-bind:src="input.icon"> 
-        <label for="answers">{{ input.text }}</label>
+          <input type="checkbox" id="answers" name="answers">
+          <img class="icon" v-bind:src="input.icon"> 
+          <label for="answers">{{ input.text }}</label>
       </div>
     </div>
     <div v-if="currentQuestion.inputType === 'open'">
@@ -38,7 +38,7 @@
     </div>
     <div v-if="currentQuestion.buttons">
       <div v-for="button in currentQuestion.buttons" :key="button.text">
-        <button v-on:click="invokeFunction(button.buttonClicked)">
+        <button v-on:click="invokeFunction(button.buttonClicked, button.value)">
           {{  button.text }}
           <img v-if="button.image" v-bind:src="button.image">
         </button>
@@ -61,12 +61,17 @@ export default {
     })
   },
   methods: {
-    invokeFunction(functionName) {
-        this[functionName]();
+    invokeFunction(functionName, value) {
+        this[functionName](value);
     },
-    ...mapActions(useCounterStore, {incrementIndex: 'increment'}),
-    buttonClicked(){
+    ...mapActions(useCounterStore, {incrementIndex: 'increment', incrementTwo: 'incrementByTwo', addCoins: 'addMoney'}),
+    incrementCurrentQuestion(value){
       this.incrementIndex();
+      this.addCoins(value)
+    },
+    incrementCurrentQuestionByTwo(value) {
+      this.incrementTwo();
+      this.addCoins(value)
     },
     getScore(){
       this.setState('score');
@@ -85,7 +90,6 @@ document.addEventListener("DOMContentLoaded", function () {
   if (slider) {
     output.innerHTML = slider.value;
     slider.oninput = function() {
-      console.log('test')
       output.innerHTML = this.value;
     }
   }

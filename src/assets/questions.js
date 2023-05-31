@@ -6,7 +6,7 @@ const vragen = [
         "buttons": [
             {
                 "text": "Oke, duidelijk!",
-                "buttonClicked": "buttonClicked"
+                "buttonClicked": "incrementCurrentQuestion"
             },
         ],
         "images": [
@@ -22,7 +22,7 @@ const vragen = [
         "buttons": [
             {
                 "text": "Oke, duidelijk!",
-                "buttonClicked": "buttonClicked"
+                "buttonClicked": "incrementCurrentQuestion"
             },
         ],
         "images": [
@@ -38,11 +38,11 @@ const vragen = [
         "buttons": [
             {
                 "text": "Huurhuis",
-                "buttonClicked": "buttonClicked"
+                "buttonClicked": "incrementCurrentQuestion"
             },
             {
                 "text": "Koophuis",
-                "buttonClicked": "buttonClicked"
+                "buttonClicked": "incrementCurrentQuestion"
             }
         ],
         "images": [
@@ -58,7 +58,7 @@ const vragen = [
         "buttons": [
             {
                 "text": "Opslaan",
-                "buttonClicked": "buttonClicked"
+                "buttonClicked": "incrementCurrentQuestion"
             }
         ],
         "inputType": "slider",
@@ -71,32 +71,32 @@ const vragen = [
             {
                 "text": "",
                 "image": "/house1.png",
-                "buttonClicked": "buttonClicked"
+                "buttonClicked": "incrementCurrentQuestion"
             },
             {
                 "text": "",
                 "image": "/house2.png",
-                "buttonClicked": "buttonClicked"
+                "buttonClicked": "incrementCurrentQuestion"
             },
             {
                 "text": "",
                 "image": "/house3.png",
-                "buttonClicked": "buttonClicked"
+                "buttonClicked": "incrementCurrentQuestion"
             },
             {
                 "text": "",
                 "image": "/house4.png",
-                "buttonClicked": "buttonClicked"
+                "buttonClicked": "incrementCurrentQuestion"
             },
             {
                 "text": "",
                 "image": "/house5.png",
-                "buttonClicked": "buttonClicked"
+                "buttonClicked": "incrementCurrentQuestion"
             },
             {
                 "text": "",
                 "image": "/house6.png",
-                "buttonClicked": "buttonClicked"
+                "buttonClicked": "incrementCurrentQuestion"
             }
         ],
     },
@@ -107,11 +107,11 @@ const vragen = [
         "buttons": [
             {
                 "text": "Ja",
-                "buttonClicked": "buttonClicked"
+                "buttonClicked": "incrementCurrentQuestion"
             },
             {
                 "text": "Nee",
-                "buttonClicked": "buttonClicked"
+                "buttonClicked": "incrementCurrentQuestion"
             }
         ],
         "images": [
@@ -127,7 +127,7 @@ const vragen = [
         "buttons": [
             {
                 "text": "Antwoorden opslaan",
-                "buttonClicked": "buttonClicked"
+                "buttonClicked": "incrementCurrentQuestion"
             }
         ],
         "inputType": "checkbox",
@@ -171,7 +171,7 @@ const vragen = [
         "buttons": [
             {
                 "text": "Verder",
-                "buttonClicked": "buttonClicked"
+                "buttonClicked": "incrementCurrentQuestion"
             }
         ],
         "answers": [
@@ -209,7 +209,7 @@ const vragen = [
         "buttons": [
             {
                 "text": "Volgende",
-                "buttonClicked": "buttonClicked"
+                "buttonClicked": "incrementCurrentQuestion"
             }
         ],
         "inputs": [
@@ -239,7 +239,7 @@ const vragen = [
         "buttons": [
             {
                 "text": "Opslaan",
-                "buttonClicked": "buttonClicked"
+                "buttonClicked": "incrementCurrentQuestion"
             }
         ],
         "inputType": "open",
@@ -252,7 +252,7 @@ const vragen = [
         "buttons": [
             {
                 "text": "Super!",
-                "buttonClicked": "buttonClicked"
+                "buttonClicked": "incrementCurrentQuestion"
             }
         ],
         "images": [
@@ -268,11 +268,11 @@ const vragen = [
         "buttons": [
             {
                 "text": "Huis 1",
-                "buttonClicked": "buttonClicked"
+                "buttonClicked": "incrementCurrentQuestion"
             },
             {
                 "text": "Huis 2",
-                "buttonClicked": "buttonClicked"
+                "buttonClicked": "incrementCurrentQuestion"
             }
         ]
     },
@@ -283,7 +283,7 @@ const vragen = [
         "buttons": [
             {
                 "text": "Bod doen",
-                "buttonClicked": "buttonClicked"
+                "buttonClicked": "incrementCurrentQuestion"
             }
         ]
     },
@@ -294,7 +294,7 @@ const vragen = [
         "buttons": [
             {
                 "text": "Bieden",
-                "buttonClicked": "buttonClicked"
+                "buttonClicked": "incrementCurrentQuestion"
             }
         ],
         "inputType": "open",
@@ -307,7 +307,7 @@ const vragen = [
         "buttons": [
             {
                 "text": "Antwoorden opslaan",
-                "buttonClicked": "buttonClicked"
+                "buttonClicked": "incrementCurrentQuestion"
             }
         ],
         "inputs": [
@@ -346,7 +346,7 @@ const vragen = [
         "buttons": [
             {
                 "text": "Ga verder",
-                "buttonClicked": "buttonClicked"
+                "buttonClicked": "incrementCurrentQuestion"
             }
         ],
         "answers": [
@@ -379,7 +379,7 @@ const vragen = [
         "buttons": [
             {
                 "text": "Voorlopig koopcontract tekenen",
-                "buttonClicked": "buttonClicked"
+                "buttonClicked": "incrementCurrentQuestion"
             }
         ],
         "images": [
@@ -397,19 +397,19 @@ const vragen = [
                 "text": "Ja, je hebt het huis nu gekocht.",
                 "isAnswer": false,
                 "value": 0,
-                "buttonClicked": "buttonClicked"
+                "buttonClicked": "incrementCurrentQuestion"
             },
             {
-                "text": "Nee, als je ontbindende voorwaarden hebt opgesteld bij het bieden op de woning dan kna  de koop nog steeds niet doorgaan.",
+                "text": "Nee, als je ontbindende voorwaarden hebt opgesteld bij het bieden op de woning dan kan de koop nog steeds niet doorgaan.",
                 "isAnswer": true,
                 "value": 50,
-                "buttonClicked": "buttonClicked"
+                "buttonClicked": "incrementCurrentQuestionByTwo"
             },
             {
                 "text": "Nee, je kunt nog altijd onder de koop uit ook al is het bod geaccepteerd.",
                 "isAnswer": false,
                 "value": 0,
-                "buttonClicked": "buttonClicked"
+                "buttonClicked": "incrementCurrentQuestion"
             }
         ]
     },
@@ -420,7 +420,7 @@ const vragen = [
         "buttons": [
             {
                 "text": "Doorgaan naar de volgende stap",
-                "buttonClicked": "buttonClicked"
+                "buttonClicked": "incrementCurrentQuestionByTwo"
             }
         ],
         "images": [
@@ -432,11 +432,11 @@ const vragen = [
     {
         "id": 19,
         "title": "Antwoord",
-        "question": "Dat klopt! Bij het kopen van een woning is het belangrijk om bij het doen van je bod ook ontbindende voorwaarden op te stellen. Hierin zet je bjivoorbeeld dat de koop van het huis niet door kan gaan wanneer je de financiering niet rond krijgt.",
+        "question": "<strong>Dat klopt!</strong> Bij het kopen van een woning is het belangrijk om bij het doen van je bod ook ontbindende voorwaarden op te stellen. Hierin zet je bijvoorbeeld dat de koop van het huis niet door kan gaan wanneer je de financiering niet rond krijgt.",
         "buttons": [
             {
                 "text": "Doorgaan naar de volgende stap",
-                "buttonClicked": "buttonClicked"
+                "buttonClicked": "incrementCurrentQuestion"
             }
         ],
         "images": [
@@ -452,7 +452,7 @@ const vragen = [
         "buttons": [
             {
                 "text": "Naar de notaris",
-                "buttonClicked": "buttonClicked"
+                "buttonClicked": "incrementCurrentQuestion"
             }
         ],
         "images": [
@@ -468,7 +468,7 @@ const vragen = [
         "buttons": [
             {
                 "text": "Doorgaan naar laatste stap",
-                "buttonClicked": "buttonClicked"
+                "buttonClicked": "incrementCurrentQuestion"
             }
         ],
         "images": [

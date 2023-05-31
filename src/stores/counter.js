@@ -26,13 +26,23 @@ const useCounterStore = defineStore('counter', {
     increment() {
       this.currentQuestion++;
     },
+    incrementByTwo() {
+      this.currentQuestion+=2;
+    },
     diminishment() {
       if(this.currentQuestion > 0){
       this.currentQuestion--;
       }
     },
-    addMoney(amount){
-      this.money += amount;
+    addMoney(value){
+      console.log(value, 'amount')
+      if (typeof value == 'string'){
+        this.money += eval(value);
+        return
+      } else if(value !== undefined) {
+        this.money += value
+        return
+      }
     },
     loseMoney(amount){
       this.money -= amount;
