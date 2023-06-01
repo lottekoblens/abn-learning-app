@@ -98,6 +98,7 @@ export default {
     checkAnswer(value, text) {
       let coins = 0
       const checkboxes = this.checkboxes
+      console.log(checkboxes, 'checkboxes')
       for(const property in checkboxes) {
         if(text === `${property}`) {
           console.log('text', `${checkboxes[property]}`)
