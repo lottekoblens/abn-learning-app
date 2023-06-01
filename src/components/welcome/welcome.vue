@@ -120,9 +120,17 @@ export default {
         box-shadow: 0 0 8px 0 rgba(34, 34, 34, .02), 0 8px 16px 0 rgba(34, 34, 34, .2);
     }
 
-    h2 {
+    h2, p {
         font-weight: normal;
         font-size: 1em;
         margin-top: 1em;
+    }
+
+    .green {
+        color: #7FCCAB;
+    }
+
+    .red {
+        color: #FD0000;
     }
 </style>

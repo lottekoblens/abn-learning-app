@@ -6,7 +6,8 @@ const vragen = [
         "buttons": [
             {
                 "text": "Oke, duidelijk!",
-                "buttonClicked": "incrementCurrentQuestion"
+                "buttonClicked": "incrementCurrentQuestion",
+                "state": "question"
             },
         ],
         "images": [
@@ -22,7 +23,8 @@ const vragen = [
         "buttons": [
             {
                 "text": "Oke, duidelijk!",
-                "buttonClicked": "incrementCurrentQuestion"
+                "buttonClicked": "incrementCurrentQuestion",
+                "state": "question"
             },
         ],
         "images": [
@@ -38,11 +40,13 @@ const vragen = [
         "buttons": [
             {
                 "text": "Huurhuis",
-                "buttonClicked": "incrementCurrentQuestion"
+                "buttonClicked": "incrementCurrentQuestion",
+                "state": "question"
             },
             {
                 "text": "Koophuis",
-                "buttonClicked": "incrementCurrentQuestion"
+                "buttonClicked": "incrementCurrentQuestion",
+                "state": "question"
             }
         ],
         "images": [
@@ -58,7 +62,8 @@ const vragen = [
         "buttons": [
             {
                 "text": "Opslaan",
-                "buttonClicked": "incrementCurrentQuestion"
+                "buttonClicked": "incrementCurrentQuestion",
+                "state": "question"
             }
         ],
         "inputType": "slider",
@@ -71,32 +76,38 @@ const vragen = [
             {
                 "text": "",
                 "image": "/house1.png",
-                "buttonClicked": "incrementCurrentQuestion"
+                "buttonClicked": "incrementCurrentQuestion",
+                "state": "question"
             },
             {
                 "text": "",
                 "image": "/house2.png",
-                "buttonClicked": "incrementCurrentQuestion"
+                "buttonClicked": "incrementCurrentQuestion",
+                "state": "question"
             },
             {
                 "text": "",
                 "image": "/house3.png",
-                "buttonClicked": "incrementCurrentQuestion"
+                "buttonClicked": "incrementCurrentQuestion",
+                "state": "question"
             },
             {
                 "text": "",
                 "image": "/house4.png",
-                "buttonClicked": "incrementCurrentQuestion"
+                "buttonClicked": "incrementCurrentQuestion",
+                "state": "question"
             },
             {
                 "text": "",
                 "image": "/house5.png",
-                "buttonClicked": "incrementCurrentQuestion"
+                "buttonClicked": "incrementCurrentQuestion",
+                "state": "question"
             },
             {
                 "text": "",
                 "image": "/house6.png",
-                "buttonClicked": "incrementCurrentQuestion"
+                "buttonClicked": "incrementCurrentQuestion",
+                "state": "question"
             }
         ],
     },
@@ -107,11 +118,13 @@ const vragen = [
         "buttons": [
             {
                 "text": "Ja",
-                "buttonClicked": "incrementCurrentQuestion"
+                "buttonClicked": "incrementCurrentQuestion",
+                "state": "question"
             },
             {
                 "text": "Nee",
-                "buttonClicked": "incrementCurrentQuestion"
+                "buttonClicked": "incrementCurrentQuestion",
+                "state": "question"
             }
         ],
         "images": [
@@ -127,7 +140,8 @@ const vragen = [
         "buttons": [
             {
                 "text": "Antwoorden opslaan",
-                "buttonClicked": "incrementCurrentQuestion"
+                "buttonClicked": "incrementCurrentQuestion",
+                "state": "question"
             }
         ],
         "inputType": "checkbox",
@@ -171,7 +185,8 @@ const vragen = [
         "buttons": [
             {
                 "text": "Verder",
-                "buttonClicked": "incrementCurrentQuestion"
+                "buttonClicked": "incrementCurrentQuestion",
+                "state": "question"
             }
         ],
         "answers": [
@@ -209,7 +224,8 @@ const vragen = [
         "buttons": [
             {
                 "text": "Volgende",
-                "buttonClicked": "incrementCurrentQuestion"
+                "buttonClicked": "incrementCurrentQuestion",
+                "state": "question"
             }
         ],
         "inputs": [
@@ -239,7 +255,8 @@ const vragen = [
         "buttons": [
             {
                 "text": "Opslaan",
-                "buttonClicked": "incrementCurrentQuestion"
+                "buttonClicked": "incrementCurrentQuestion",
+                "state": "question"
             }
         ],
         "inputType": "open",
@@ -248,11 +265,12 @@ const vragen = [
     {
         "id": 11,
         "title": "Hypotheek",
-        "question": "De hypotheekadviseur van de bank geeft aan dat je een hypotheek kunt krijgen van <strong>€350.000</strong>. Zonder schulden en leningen had je een hypotheek kunnen krijgen van €370.000.",
+        "question": "De hypotheekadviseur van de bank geeft aan dat je een hypotheek kunt krijgen van <strong>€350.000</strong>. <p>Zonder schulden en leningen had je een hypotheek kunnen krijgen van €370.000.</p>",
         "buttons": [
             {
                 "text": "Super!",
-                "buttonClicked": "incrementCurrentQuestion"
+                "buttonClicked": "changeState",
+                "state": "house-search"
             }
         ],
         "images": [
@@ -262,33 +280,7 @@ const vragen = [
         ]
     },
     {
-        "id": 11,
-        "title": "Huizen zoeker",
-        "question": "Ga op zoek naar het huis dat past bij jouw wensen!",
-        "buttons": [
-            {
-                "text": "Huis 1",
-                "buttonClicked": "incrementCurrentQuestion"
-            },
-            {
-                "text": "Huis 2",
-                "buttonClicked": "incrementCurrentQuestion"
-            }
-        ]
-    },
-    {
         "id": 12,
-        "title": "Huizen zoeker",
-        "question": "Informatie over huis",
-        "buttons": [
-            {
-                "text": "Bod doen",
-                "buttonClicked": "incrementCurrentQuestion"
-            }
-        ]
-    },
-    {
-        "id": 13,
         "title": "Bieden",
         "question": "Wat is de hoogte van <strong>het bod</strong> dat je gaat doen?",
         "buttons": [
@@ -301,7 +293,7 @@ const vragen = [
         "placeholder": "Voer hier het bedrag in"
     },
     {
-        "id": 14,
+        "id": 13,
         "title": "Vraag 3",
         "question": "Welke <strong>kosten</strong> heb je nog meer als <strong>koper</strong> van een huis?",
         "buttons": [
@@ -340,9 +332,9 @@ const vragen = [
         "inputType": "checkbox",
     },
     {
-        "id": 15,
+        "id": 14,
         "title": "Antwoord",
-        "question": "Als koper van een huis heb je veel kosten die je nog moet maken. Alle antwoorden waren dus juist!",
+        "question": "Als koper van een huis heb je veel kosten die je nog moet maken. <p><strong class='green'>Alle antwoorden waren dus juist!</strong></p>",
         "buttons": [
             {
                 "text": "Ga verder",
@@ -351,9 +343,9 @@ const vragen = [
         ]
     },
     {
-        "id": 16,
+        "id": 15,
         "title": "Bieden",
-        "question": "Gefeliciteerd! Je bod is geaccepteerd!",
+        "question": "<strong>Gefeliciteerd! Je bod is geaccepteerd!</strong>",
         "buttons": [
             {
                 "text": "Voorlopig koopcontract tekenen",
@@ -367,9 +359,9 @@ const vragen = [
         ]
     },
     {
-        "id": 17,
+        "id": 16,
         "title": "Vraag 4",
-        "question": "Het bod is een week geleden geaccepteerd. Betekent dit nu dat je niet meer onder de koop van de woning uit kunt komen?",
+        "question": "Het bod is een week geleden geaccepteerd. Betekent dit nu dat je <strong>niet</strong> meer onder de koop van de woning uit kunt komen?",
         "buttons": [
             {
                 "text": "Ja, je hebt het huis nu gekocht.",
@@ -392,9 +384,9 @@ const vragen = [
         ]
     },
     {
-        "id": 18,
+        "id": 17,
         "title": "Antwoord",
-        "question": "Dat is niet juist. Bij het kopen van een woning is het belangrijk om bij het doen van je bod ook ontbindende voorwaarden op te stellen. Hierin zet je bjivoorbeeld dat de koop van het huis niet door kan gaan wanneer je de financiering niet rond krijgt.",
+        "question": "<strong class='red'>Dat is niet juist.</strong> Bij het kopen van een woning is het belangrijk om bij het doen van je bod ook <strong>ontbindende voorwaarden</strong> op te stellen. Hierin zet je bjivoorbeeld dat de koop van het huis niet door kan gaan wanneer je de financiering niet rond krijgt.",
         "buttons": [
             {
                 "text": "Doorgaan naar de volgende stap",
@@ -408,9 +400,9 @@ const vragen = [
         ]
     },
     {
-        "id": 19,
+        "id": 18,
         "title": "Antwoord",
-        "question": "<strong>Dat klopt!</strong> Bij het kopen van een woning is het belangrijk om bij het doen van je bod ook ontbindende voorwaarden op te stellen. Hierin zet je bijvoorbeeld dat de koop van het huis niet door kan gaan wanneer je de financiering niet rond krijgt.",
+        "question": "<strong class='green'>Dat klopt!</strong> Bij het kopen van een woning is het belangrijk om bij het doen van je bod ook ontbindende voorwaarden op te stellen. Hierin zet je bijvoorbeeld dat de koop van het huis niet door kan gaan wanneer je de financiering niet rond krijgt.",
         "buttons": [
             {
                 "text": "Doorgaan naar de volgende stap",
@@ -424,9 +416,9 @@ const vragen = [
         ]
     },
     {
-        "id": 20,
+        "id": 19,
         "title": "Bank",
-        "question": "Nu komt het belangrijkste gedeelte, de hypotheek aanvragen bij de bank. Wanneer je alle gegevens aanlevert, gaat de bank nog een keer controleren of je kan lenen wat je wilt lenen. Wanneer de bank akkoord is, ontvang je hiervan een hypotheekvoorstel.",
+        "question": "Nu komt het belangrijkste gedeelte, <strong>de hypotheek aanvragen bij de bank</strong>. Wanneer je alle gegevens aanlevert, gaat de bank nog een keer controleren of je kan lenen wat je wilt lenen. Wanneer de bank akkoord is, ontvang je hiervan een hypotheekvoorstel.",
         "buttons": [
             {
                 "text": "Naar de notaris",
@@ -440,9 +432,9 @@ const vragen = [
         ]
     },
     {
-        "id": 21,
+        "id": 20,
         "title": "Notaris",
-        "question": "Dan nu is het tijd om het officiële koopcontract te tekenen. Dit doe je bij de notaris. Wanneer het contract is getekend, is alles geregeld!",
+        "question": "Dan nu is het tijd om het <strong>officiële koopcontract</strong> te tekenen. Dit doe je bij de notaris. Wanneer het contract is getekend, is alles geregeld!",
         "buttons": [
             {
                 "text": "Doorgaan naar laatste stap",
@@ -456,9 +448,9 @@ const vragen = [
         ]
     },
     {
-        "id": 22,
+        "id": 21,
         "title": "Gefeliciteerd",
-        "question": "Gefeliciteerd, je hebt de sleutels gekregen van je nieuwe huis!",
+        "question": "<strong>Gefeliciteerd</strong>, je hebt de sleutels gekregen van je nieuwe huis!",
         "buttons": [
             {
                 "text": "Bekijk plek op het scorebord",

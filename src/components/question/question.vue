@@ -2,8 +2,7 @@
   <div v-if="!!currentQuestion" class="box">
     <h1>{{ currentQuestion.title }}</h1>
     <hr>
-    <h2 v-html="question"></h2>
-    <p v-if="currentQuestion.body"> {{ currentQuestion.body }}</p>
+    <p v-html="question"></p>
     <div v-if="currentQuestion.images">
       <div v-if="currentQuestion.images.length > 0 && currentQuestion.images.length < 2">
         <div v-for="image in currentQuestion.images">
@@ -40,7 +39,7 @@
   </div>
     <div v-if="currentQuestion.buttons">
       <div v-for="button in currentQuestion.buttons" :key="button.text">
-        <button v-on:click="invokeFunction(button.buttonClicked, button.value)">
+        <button v-on:click="invokeFunction(button.buttonClicked, button.value, button.state)">
           {{  button.text }}
           <img v-if="button.image" v-bind:src="button.image">
         </button>
@@ -73,8 +72,8 @@ export default {
     }
   },
   methods: {
-    invokeFunction(functionName, value) {
-        this[functionName](value);
+    invokeFunction(functionName, value, state) {
+        this[functionName](value, state);
     },
     ...mapActions(useCounterStore, {incrementIndex: 'increment', incrementTwo: 'incrementByTwo', addCoins: 'addMoney'}),
     incrementCurrentQuestion(value){
@@ -88,6 +87,10 @@ export default {
     checkboxCheck(value) {
       this.incrementIndex();
       this.addCoins(value);
+    },
+    changeState(value, state) {
+      this.setState(`${state}`);
+      this.incrementIndex();
     },
     getScore(){
       this.setState('score');
@@ -153,6 +156,10 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+}
+
+.answers p {
+  margin-top: 0;
 }
 
 .slider {

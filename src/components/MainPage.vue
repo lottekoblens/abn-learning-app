@@ -1,7 +1,7 @@
 <template>
     <Header v-if="state==='question'" />
     <Logo v-if="state==='welcome' || state==='home'" />
-    <BackButton v-if="state==='summary'" />
+    <BackButton v-if="state==='summary' || state==='house-search' || state==='house-information'" />
   <div class="main d-flex justify-center align-center">
     <Welcome v-if="state==='welcome'" />
     <Question v-if="state==='question'"/>
@@ -10,8 +10,9 @@
     <Shop v-if="state==='shop'"/>
     <Summary v-if="state==='summary'" />
     <HouseSearch v-if="state==='house-search'" />
+    <HouseInformation v-if="state==='house-information'" />
   </div>
-  <Footer v-if="state==='question' || state==='score'" />
+  <Footer v-if="state==='question' || state==='score' || state==='house-information' || state==='house-search'" />
 </template>
 <script>
 import Header from './header/header.vue'
@@ -26,6 +27,7 @@ import { mapState } from 'pinia';
 import usePersonStore from '../stores/person';
 import BackButton from './back-button/back-button.vue';
 import HouseSearch from './house-search/house-search.vue'
+import HouseInformation from './house-information/house-information.vue';
 
 export default {
   components: {
@@ -38,7 +40,8 @@ export default {
     Logo,
     Summary,
     BackButton,
-    HouseSearch
+    HouseSearch,
+    HouseInformation
 },
   computed: {
     ...mapState(usePersonStore, {
