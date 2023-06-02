@@ -23,7 +23,7 @@
     </div>
     <div class="answer-box" v-if="currentQuestion.inputType === 'checkbox'">
       <div v-for="input in currentQuestion.inputs" class="answers d-flex flex-row justify-start">
-          <input type="checkbox" v-model="checkboxes[input.text]" v-on:click="checkAnswer(input.value, input.text)" id="answers" name="answers">
+          <input type="checkbox" v-on:click="checkAnswer($event, input.value)" id="answers" name="answers">
           <img class="icon" v-bind:src="input.icon"> 
           <label for="answers">{{ input.text }}</label>
       </div>
@@ -60,7 +60,7 @@ export default {
   data() {
     return {
       salary : 1000,
-      checkboxes: {}
+      possibleCoins: 0
     }
   },
   computed: {
@@ -95,20 +95,17 @@ export default {
     getScore(){
       this.setState('score');
     },
-    checkAnswer(value, text) {
-      let coins = 0
-      const checkboxes = this.checkboxes
-      console.log(checkboxes, 'checkboxes')
-      for(const property in checkboxes) {
-        if(text === `${property}`) {
-          console.log('text', `${checkboxes[property]}`)
-          if(`${checkboxes[property]}` !== true) {
-            console.log(value)
-            return coins += value
-          }
-        }
-    }
-      console.log(coins, 'coins')
+    checkAnswer(event, value) {
+
+      if(event.target.checked){
+        this.possibleCoins += value
+        return
+      } 
+      this.possibleCoins -= value
+    },
+    submitAnswer() {
+      this.addCoins(this.possibleCoins)
+      this.incrementIndex();
     },
     ...mapActions(usePersonStore, {
             setState: 'setState'

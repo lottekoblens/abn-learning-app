@@ -140,7 +140,7 @@ const vragen = [
         "buttons": [
             {
                 "text": "Antwoorden opslaan",
-                "buttonClicked": "incrementCurrentQuestion",
+                "buttonClicked": "submitAnswer",
                 "state": "question"
             }
         ],
