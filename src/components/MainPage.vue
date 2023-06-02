@@ -11,6 +11,7 @@
     <Summary v-if="state==='summary'" />
     <HouseSearch v-if="state==='house-search'" />
     <HouseInformation v-if="state==='house-information'" />
+    <QuestionHouse v-if="state==='question-search'" />
   </div>
   <Footer v-if="state==='question' || state==='score' || state==='house-information' || state==='house-search'" />
 </template>
@@ -28,6 +29,7 @@ import usePersonStore from '../stores/person';
 import BackButton from './back-button/back-button.vue';
 import HouseSearch from './house-search/house-search.vue'
 import HouseInformation from './house-information/house-information.vue';
+import QuestionHouse from './question-house/question-house.vue'
 
 export default {
   components: {
@@ -41,7 +43,8 @@ export default {
     Summary,
     BackButton,
     HouseSearch,
-    HouseInformation
+    HouseInformation,
+    QuestionHouse
 },
   computed: {
     ...mapState(usePersonStore, {
