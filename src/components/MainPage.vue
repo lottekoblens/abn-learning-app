@@ -1,7 +1,7 @@
 <template>
     <Header v-if="state==='question'" />
     <Logo v-if="state==='welcome' || state==='home'" />
-    <BackButton v-if="state==='summary' || state==='house-search' || state==='house-information'" />
+    <BackButton v-if="state==='summary' || state==='house-search' || state==='house-information' || state==='question-search' "/>
   <div class="main d-flex justify-center align-center">
     <Welcome v-if="state==='welcome'" />
     <Question v-if="state==='question'"/>

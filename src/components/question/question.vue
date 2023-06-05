@@ -96,7 +96,6 @@ export default {
       this.setState('score');
     },
     checkAnswer(event, value) {
-
       if(event.target.checked){
         this.possibleCoins += value
         return

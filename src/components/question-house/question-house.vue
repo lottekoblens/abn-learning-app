@@ -49,7 +49,12 @@ export default {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        width: 100%;
+        width: 109%;
         gap: 2em;
+        margin-top: 2em;
+    }
+
+    .question-houses .button-img {
+        margin-top: 0;
     }
 </style>
