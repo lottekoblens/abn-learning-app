@@ -19,7 +19,7 @@ const vragen = [
     {
         "id": 2,
         "title": "Welkom",
-        "question": "Je gaat zo het proces doorlopen van het huren of kopen van een huis. Dit kun je zien als een soort van <strong>simulatie</strong>. Het lijkt dus alsof het allemaal echt is wat je moet doen, maar dat is het niet. Wees dus <strong>niet bang</strong> om het proces te doorlopen en in te vullen wat jij denkt dat goed is.",
+        "question": "Je gaat zo het proces doorlopen van het huren of kopen van een huis. Dit kun je zien als een soort van <strong>simulatie</strong>. Het lijkt dus alsof het allemaal echt is wat je moet doen, maar dat is het niet. <p>Wees dus <strong>niet bang</strong> om het proces te doorlopen en in te vullen wat jij denkt dat goed is.</p>",
         "buttons": [
             {
                 "text": "Oke, duidelijk!",
@@ -93,7 +93,7 @@ const vragen = [
     {
         "id": 6,
         "title": "Hypotheek",
-        "question": "<p>Voor bepaalde dingen die komen kijken bij het kopen van een huis heb je eigen spaargeld nodig. Het is dus handig om nu al na te denken of je al kan beginnen met sparen.</p>",
+        "question": "Voor bepaalde dingen die komen kijken bij het kopen van een huis heb je eigen spaargeld nodig. Het is dus handig om nu al na te denken of je kan beginnen met sparen.",
         "buttons": [
             {
                 "text": "Oké, duidelijk!",
@@ -155,7 +155,7 @@ const vragen = [
     {
         "id": 8,
         "title": "Antwoord",
-        "question": "<p>Welke zaken zorgen ervoor dat je een <strong>lagere hypotheek</strong> kunt krijgen?</p><p>Alleen de scooter zorgt <strong>niet</strong> voor een lagere hypotheek. Dat was dus het enige foute antwoord.</p>",
+        "question": "Welke zaken zorgen ervoor dat je een <strong>lagere hypotheek</strong> kunt krijgen?</p><p>Alleen het hebben van een scooter zorgt <strong>niet</strong> voor een lagere hypotheek. Dat was dus het enige foute antwoord.",
         "buttons": [
             {
                 "text": "Verder",
@@ -239,7 +239,7 @@ const vragen = [
     {
         "id": 11,
         "title": "Hypotheek",
-        "question": "De hypotheekadviseur van de bank geeft aan dat je een hypotheek kunt krijgen van <strong>€350.000</strong>. <p>Zonder schulden en leningen had je een hypotheek kunnen krijgen van €370.000.</p>",
+        "question": "De hypotheekadviseur van de bank geeft aan dat je een hypotheek kunt krijgen van <strong>€350.000</strong>.</p> <p>Zonder schulden en leningen had je een hypotheek kunnen krijgen van €370.000.",
         "buttons": [
             {
                 "text": "Super!",
@@ -308,7 +308,7 @@ const vragen = [
     {
         "id": 14,
         "title": "Antwoord",
-        "question": "Als koper van een huis heb je veel kosten die je nog moet maken. <p><strong class='green'>Alle antwoorden waren dus juist!</strong></p>",
+        "question": "Als koper van een huis heb je veel kosten die je nog moet maken.</p> <p><strong class='green'>Alle antwoorden waren dus juist!</strong>",
         "buttons": [
             {
                 "text": "Ga verder",
@@ -360,7 +360,7 @@ const vragen = [
     {
         "id": 17,
         "title": "Antwoord",
-        "question": "<p><strong class='red'>Dat is niet juist.</strong></p> <p>Bij het kopen van een woning is het belangrijk om bij het doen van je bod ook <strong>ontbindende voorwaarden</strong> op te stellen. Hierin zet je bjivoorbeeld dat de koop van het huis niet door kan gaan wanneer je de financiering niet rond krijgt.</p>",
+        "question": "<strong class='red'>Dat is niet juist.</strong></p> <p>Bij het kopen van een woning is het belangrijk om bij het doen van je bod ook <strong>ontbindende voorwaarden</strong> op te stellen. Hierin zet je bijvoorbeeld dat de koop van het huis niet door kan gaan wanneer je de financiering niet rond krijgt.",
         "buttons": [
             {
                 "text": "Doorgaan naar de volgende stap",
@@ -376,7 +376,7 @@ const vragen = [
     {
         "id": 18,
         "title": "Antwoord",
-        "question": "<p><strong class='green'>Dat klopt!</strong></p> <p>Bij het kopen van een woning is het belangrijk om bij het doen van je bod ook ontbindende voorwaarden op te stellen. Hierin zet je bijvoorbeeld dat de koop van het huis niet door kan gaan wanneer je de financiering niet rond krijgt.</p>",
+        "question": "<strong class='green'>Dat klopt!</strong></p> <p>Bij het kopen van een woning is het belangrijk om bij het doen van je bod ook ontbindende voorwaarden op te stellen. Hierin zet je bijvoorbeeld dat de koop van het huis niet door kan gaan wanneer je de financiering niet rond krijgt.",
         "buttons": [
             {
                 "text": "Doorgaan naar de volgende stap",
@@ -392,7 +392,7 @@ const vragen = [
     {
         "id": 19,
         "title": "Bank",
-        "question": "Nu komt het belangrijkste gedeelte, <strong>de hypotheek aanvragen bij de bank</strong>. Wanneer je alle gegevens aanlevert, gaat de bank nog een keer controleren of je kan lenen wat je wilt lenen. Wanneer de bank akkoord is, ontvang je hiervan een hypotheekvoorstel.",
+        "question": "Nu komt het belangrijkste gedeelte, <strong>de hypotheek aanvragen bij de bank</strong>. Wanneer je alle gegevens aanlevert, gaat de bank nog een keer controleren of je kan lenen wat je wilt lenen.</p> <p>Wanneer de bank akkoord is, ontvang je hiervan een hypotheekvoorstel.",
         "buttons": [
             {
                 "text": "Naar de notaris",
@@ -440,7 +440,7 @@ const vragen = [
     {
         "id": 22,
         "title": "Oh nee!",
-        "question": "<p><strong>Oh nee</strong>, je komt er net achter dat je partner niet langer met je wilt samenwonen.</p><p>Nu kun je het koophuis niet meer betalen. Ga daarom snel op zoek naar een huurhuis!</p>",
+        "question": "<strong>Oh nee</strong>, je komt er net achter dat je partner niet langer met je wilt samenwonen.</p><p>Nu kun je het koophuis niet meer betalen. Ga daarom snel op zoek naar een huurhuis!",
         "buttons": [
             {
                 "text": "Huurhuis zoeken"
