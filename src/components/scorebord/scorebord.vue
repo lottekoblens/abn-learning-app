@@ -4,59 +4,43 @@
             <h1>Scorebord</h1>
             <ul class="topscore">
                 <li>
-                    <img class="avatar" src="/house1.png">
+                    <img class="avatar" src="/avatar1.png">
                     <h3>Name</h3>
                     <p><img src="/coins.png">Coins</p>
                 </li>
                 <li>
-                    <img class="avatar" src="/house1.png">
+                    <img class="avatar" src="/avatar3.png">
                     <h3>Name</h3>
                     <p><img src="/coins.png">Coins</p>
                 </li>
                 <li>
-                    <img class="avatar" src="/house1.png">
+                    <img class="avatar" src="/avatar2.png">
                     <h3>Name</h3>
                     <p><img src="/coins.png">Coins</p>
                 </li>
             </ul>
         </div>
         <ul class="listscore">
-                <li>
-                    <p>4</p>
-                    <img class="avatar" src="/house1.png">
-                    <h3>Name</h3>
-                    <img src="/coins.png">
-                    <p>Coins</p>
-                </li>
-                <li>
-                    <p>5</p>
-                    <img class="avatar" src="/house1.png">
-                    <h3>Name</h3>
-                    <img src="/coins.png">
-                    <p>Coins</p>
-                </li>
-                <li>
-                    <p>6</p>
-                    <img class="avatar" src="/house1.png">
-                    <h3>Name</h3>
-                    <img src="/coins.png">
-                    <p>Coins</p>
-                </li>
-                <li>
-                    <p>7</p>
-                    <img class="avatar" src="/house1.png">
-                    <h3>Name</h3>
-                    <img src="/coins.png">
-                    <p>Coins</p>
+                <li v-for="person in scores">
+                        <img class="avatar" v-bind:src="person.avatar">
+                        <h3>{{person.name}}</h3>
+                        <img src="/coins.png">
+                        <p>{{person.coins}}</p>
                 </li>
             </ul>
     </div>
+    <footer class="d-flex score-footer">
+        <div class="d-flex">
+            <button class="back-button" v-on:click="goToHomepage"><img src="/home-icon.png"></button>
+            <button class="back-button"><img src="/chat-icon.png"></button>
+        </div>
+    </footer>
 </template>
 
 <script>
 import usePersonStore from '../../stores/person';
 import { mapState, mapActions } from 'pinia';
-import useCounterStore from '../../stores/counter';
+import useScoreStore from '../../stores/score'
 
 export default {
     name: 'Scorebord',
@@ -64,15 +48,23 @@ export default {
         ...mapState(usePersonStore, {
             storedName: 'getName',
         }),
+        ...mapState(useScoreStore, {
+            currentScores: 'getScores'
+        }),
+        scores(){
+            return this.currentScores;
+        },
+        goToHomepage(){
+            this.setState('home');
+        },
     },
     methods: {
         ...mapActions(usePersonStore, {
             setState: 'setState'
         }),
-        startQuestions(){
-            this.setState('question');
-            this.setQuestion(0);
-        }
+        ...mapActions(useScoreStore, {
+            setScore: 'setScore',
+        })
     }
 }
 </script>
@@ -153,5 +145,11 @@ export default {
 
     .listscore p {
         margin-top: 0;
+    }
+
+    .score-footer {
+        position: fixed;
+        bottom: 1em;
+        justify-content: space-between;
     }
 </style>

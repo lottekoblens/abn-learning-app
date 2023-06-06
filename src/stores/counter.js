@@ -35,7 +35,6 @@ const useCounterStore = defineStore('counter', {
       }
     },
     addMoney(value){
-      console.log(value, 'amount')
       if (typeof value == 'string'){
         this.money += eval(value);
         return

@@ -19,7 +19,7 @@ const vragen = [
     {
         "id": 2,
         "title": "Welkom",
-        "question": "Bij het gebruik van deze applicatie zul je het proces doorlopen van het huren of kopen van een huis. Dit kun je zien als een soort van <strong>simulatie</strong>. Het lijkt dus alsof het allemaal echt is wat je moet doen, maar dat is het niet. Wees dus <strong>niet bang</strong> om het proces te doorlopen en in te vullen wat jij denkt dat goed is.",
+        "question": "Je gaat zo het proces doorlopen van het huren of kopen van een huis. Dit kun je zien als een soort van <strong>simulatie</strong>. Het lijkt dus alsof het allemaal echt is wat je moet doen, maar dat is het niet. Wees dus <strong>niet bang</strong> om het proces te doorlopen en in te vullen wat jij denkt dat goed is.",
         "buttons": [
             {
                 "text": "Oke, duidelijk!",

@@ -1,16 +1,18 @@
 import { defineStore } from 'pinia'
 import {scores} from '../assets/scores';
 
-const useCounterStore = defineStore('counter', {
+const useScoreStore = defineStore('score', {
   state: () => ({
     scores: scores
   }),
   getters: {
-  
+    getScores: (state) => {
+        return state.scores;
+      }
   },
   actions: {
     
   },
 })
 
-export default useCounterStore;
+export default useScoreStore;

@@ -13,7 +13,7 @@
     <HouseInformation v-if="state==='house-information'" />
     <QuestionHouse v-if="state==='question-search'" />
   </div>
-  <Footer v-if="state==='question' || state==='score' || state==='house-information' || state==='house-search'" />
+  <Footer v-if="state==='question' || state==='house-information' || state==='house-search'" />
 </template>
 <script>
 import Header from './header/header.vue'

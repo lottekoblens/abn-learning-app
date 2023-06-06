@@ -4,7 +4,7 @@
             <div>
                 <h1> Vraag 1 </h1>
                 <hr>
-                <h2> Welk huis denk je dat je kunt kopen met het inkomen dat je hebt opgegeven? </h2>
+                <h2> Welk huis denk je dat je kunt kopen met het inkomen dat je net hebt ingevuld? </h2>
                 <div class="question-houses">
                     <button v-on:click="showNextQuestion" class="button-img"><img class="house" src="/huis1.png"></button>
                     <button v-on:click="showNextQuestion" class="button-img"><img class="house" src="/huis2.png"></button>
