@@ -21,5 +21,5 @@ export default defineConfig({
     host: true
   },
   url: "http://lottekoblens.github.io",
-baseurl: "/abn-learning-app"
+  baseurl: "/abn-learning-app"
 })
