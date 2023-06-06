@@ -136,7 +136,7 @@ export default {
 .answer-box {
   display: flex;
   flex-direction: column;
-  margin-top: 0.5em;
+  margin-top: 1em;
 }
 
 .icon {

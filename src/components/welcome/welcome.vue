@@ -4,6 +4,7 @@
             <h1> Welkom </h1>
             <hr>
             <h2> Hi, {{storedName}}. Laten we samen op zoek gaan naar jouw huis! </h2>
+            <img class="image-big" src="/house-illustration.jpg">
             <button v-on:click="startQuestions">Begin zoektocht</button>
         </div>
         <div v-else>
@@ -82,7 +83,7 @@ export default {
         padding-bottom: 3em;
         flex-direction: column;
         min-width: 100%;
-        box-shadow: 0 0 8px 0 rgba(34, 34, 34, .02), 0 8px 16px 0 rgba(34, 34, 34, .2);
+        /* box-shadow: 0 0 8px 0 rgba(34, 34, 34, .02), 0 8px 16px 0 rgba(34, 34, 34, .2); */
     }
 
     .box h1 {
@@ -117,7 +118,7 @@ export default {
         color: white;
         margin-top: 1em;
         font-weight: 500;
-        box-shadow: 0 0 8px 0 rgba(34, 34, 34, .02), 0 8px 16px 0 rgba(34, 34, 34, .2);
+        /* box-shadow: 0 0 8px 0 rgba(34, 34, 34, .02), 0 8px 16px 0 rgba(34, 34, 34, .2); */
     }
 
     h2, p {

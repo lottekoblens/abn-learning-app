@@ -104,31 +104,31 @@ const vragen = [
         "inputType": "checkbox",
         "inputs": [
             {
-                "icon": "/studieschuld.png",
+                "icon": "/hoed-zwart.png",
                 "text": "Studieschuld",
                 "isAnswer": true,
                 "value": 15
             },
             {
-                "icon": "/telefoonabonnement.png",
+                "icon": "/telefoon-zwart.png",
                 "text": "Telefoonabonnement",
                 "isAnswer": true,
                 "value": 15
             },
             {
-                "icon": "/scooter.png",
+                "icon": "/scooter-zwart.png",
                 "text": "Scooter",
                 "isAnswer": false,
                 "value": 0
             },
             {
-                "icon": "/car.png",
+                "icon": "/car-zwart.png",
                 "text": "Private lease auto",
                 "isAnswer": true,
                 "value": 15
             },
             {
-                "icon": "/leningen.png",
+                "icon": "/euro-zwart.png",
                 "text": "Leningen",
                 "isAnswer": true,
                 "value": 15
@@ -138,7 +138,7 @@ const vragen = [
     {
         "id": 7,
         "title": "Antwoord",
-        "question": "Welke zaken zorgen ervoor dat je een <strong>lagere hypotheek</strong> kunt krijgen?",
+        "question": "<p>Welke zaken zorgen ervoor dat je een <strong>lagere hypotheek</strong> kunt krijgen?</p><p>Alleen de scooter zorgt <strong>niet</strong> voor een lagere hypotheek. Dat was dus het enige foute antwoord.</p>",
         "buttons": [
             {
                 "text": "Verder",
@@ -148,27 +148,27 @@ const vragen = [
         ],
         "answers": [
             {
-                "icon": "/studieschuld.png",
+                "icon": "/hoed-groen.png",
                 "text": "Studieschuld",
                 "isAnswer": true
             },
             {
-                "icon": "/telefoonabonnement.png",
+                "icon": "/telefoon-groen.png",
                 "text": "Telefoonabonnement",
                 "isAnswer": true
             },
             {
-                "icon": "/scooter.png",
+                "icon": "/scooter-rood.png",
                 "text": "Scooter",
                 "isAnswer": true
             },
             {
-                "icon": "/car.png",
+                "icon": "/car-groen.png",
                 "text": "Private lease auto",
                 "isAnswer": true
             },
             {
-                "icon": "/leningen.png",
+                "icon": "/euro-groen.png",
                 "text": "Leningen",
                 "isAnswer": true
             }
@@ -343,7 +343,7 @@ const vragen = [
     {
         "id": 16,
         "title": "Antwoord",
-        "question": "<strong class='red'>Dat is niet juist.</strong> Bij het kopen van een woning is het belangrijk om bij het doen van je bod ook <strong>ontbindende voorwaarden</strong> op te stellen. Hierin zet je bjivoorbeeld dat de koop van het huis niet door kan gaan wanneer je de financiering niet rond krijgt.",
+        "question": "<p><strong class='red'>Dat is niet juist.</strong></p> <p>Bij het kopen van een woning is het belangrijk om bij het doen van je bod ook <strong>ontbindende voorwaarden</strong> op te stellen. Hierin zet je bjivoorbeeld dat de koop van het huis niet door kan gaan wanneer je de financiering niet rond krijgt.</p>",
         "buttons": [
             {
                 "text": "Doorgaan naar de volgende stap",
@@ -359,7 +359,7 @@ const vragen = [
     {
         "id": 17,
         "title": "Antwoord",
-        "question": "<strong class='green'>Dat klopt!</strong> Bij het kopen van een woning is het belangrijk om bij het doen van je bod ook ontbindende voorwaarden op te stellen. Hierin zet je bijvoorbeeld dat de koop van het huis niet door kan gaan wanneer je de financiering niet rond krijgt.",
+        "question": "<p><strong class='green'>Dat klopt!</strong></p> <p>Bij het kopen van een woning is het belangrijk om bij het doen van je bod ook ontbindende voorwaarden op te stellen. Hierin zet je bijvoorbeeld dat de koop van het huis niet door kan gaan wanneer je de financiering niet rond krijgt.</p>",
         "buttons": [
             {
                 "text": "Doorgaan naar de volgende stap",
@@ -417,6 +417,21 @@ const vragen = [
         "images": [
             {
                 "src" : '/sleutels.png'
+            }
+        ]
+    },
+    {
+        "id": 21,
+        "title": "Oh nee!",
+        "question": "<p><strong>Oh nee</strong>, je komt er net achter dat je partner niet langer met je wilt samenwonen.</p><p>Nu kun je het koophuis niet meer betalen. Ga daarom snel op zoek naar een huurhuis!</p>",
+        "buttons": [
+            {
+                "text": "Huurhuis zoeken"
+            }
+        ],
+        "images": [
+            {
+                "src" : '/paniek.jpg'
             }
         ]
     }

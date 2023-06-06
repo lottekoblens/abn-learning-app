@@ -3,20 +3,11 @@
         <div class="top-score">
             <h1>Scorebord</h1>
             <ul class="topscore">
-                <li>
-                    <img class="avatar" src="/avatar1.png">
-                    <h3>Name</h3>
-                    <p><img src="/coins.png">Coins</p>
-                </li>
-                <li>
-                    <img class="avatar" src="/avatar3.png">
-                    <h3>Name</h3>
-                    <p><img src="/coins.png">Coins</p>
-                </li>
-                <li>
-                    <img class="avatar" src="/avatar2.png">
-                    <h3>Name</h3>
-                    <p><img src="/coins.png">Coins</p>
+                <li v-for="person in scores.slice(0, 3)">
+                    <img class="avatar" v-bind:src="person.avatar">
+                        <h3>{{person.name}}</h3>
+                        <img src="/coins.png">
+                        <p>{{person.coins}}</p>
                 </li>
             </ul>
         </div>
@@ -41,6 +32,7 @@
 import usePersonStore from '../../stores/person';
 import { mapState, mapActions } from 'pinia';
 import useScoreStore from '../../stores/score'
+import useCounterStore from '../../stores/counter';
 
 export default {
     name: 'Scorebord',
@@ -64,9 +56,19 @@ export default {
         }),
         ...mapActions(useScoreStore, {
             setScore: 'setScore',
-        })
+        }),
+        ...mapActions(useCounterStore, {incrementIndex: 'increment'}),
+        showPanicQuestion() {
+            timeout = setTimeout(changeToPanic, 3000)
+        },
+        changeToPanic() {
+            this.setState('question');
+            this.incrementIndex();
+        }
     }
 }
+
+
 </script>
 
 <style>
@@ -150,6 +152,12 @@ export default {
     .score-footer {
         position: fixed;
         bottom: 1em;
+        width: 100%;
+        padding: 1em;
+    }
+
+    .score-footer div {
+        width: 100%;
         justify-content: space-between;
     }
 </style>
