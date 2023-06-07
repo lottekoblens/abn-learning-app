@@ -65,6 +65,7 @@ export default {
 
     .main { 
       display: flex;
+      height: fit-content;
     }
 
     hr {

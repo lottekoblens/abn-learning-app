@@ -30,11 +30,13 @@ export default {
             setState: 'setState'
         }),
         ...mapActions(useCounterStore, {
-            setQuestion: 'setQuestion'
+            setQuestion: 'setQuestion',
+            resetCoins: 'resetMoney'
         }),
         startQuestions(){
             this.setState('question');
             this.setQuestion(0);
+            this.resetCoins()
         },
         goToSummaryPage() {
             this.setState('summary');

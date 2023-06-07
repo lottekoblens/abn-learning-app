@@ -12,7 +12,7 @@
             </ul>
         </div>
         <ul class="listscore">
-                <li v-for="person in scores">
+                <li v-for="person in scores.slice(3,6)">
                         <img class="avatar" v-bind:src="person.avatar">
                         <h3>{{person.name}}</h3>
                         <img src="/coins.png">
@@ -23,7 +23,7 @@
     <footer class="d-flex score-footer">
         <div class="d-flex">
             <button class="back-button" v-on:click="goToHomepage"><img src="/home-icon.png"></button>
-            <button class="back-button"><img src="/chat-icon.png"></button>
+            <button class="back-button" v-on:click="changeToPanic"><img src="/chat-icon.png"></button>
         </div>
     </footer>
 </template>
@@ -44,7 +44,9 @@ export default {
             currentScores: 'getScores'
         }),
         scores(){
-            return this.currentScores;
+            const scores = this.currentScores
+            scores.sort((a,b) => b.coins - a.coins);
+            return scores;
         },
         goToHomepage(){
             this.setState('home');
@@ -76,6 +78,7 @@ export default {
         width: 100%;
         position: absolute;
         top: 0;
+        min-height: 100vh;
     }
 
     .scorebord h1 {
@@ -86,7 +89,7 @@ export default {
 
     .top-score {
         padding-top: 1em;
-        height: 45vh;
+        min-height: 45vh;
         width: 100%;
         background: linear-gradient(45deg, transparent 20px, #237652 0);
     }
@@ -103,6 +106,8 @@ export default {
         justify-content: center;
         gap: 1em;
         margin-top: 1em;
+        padding-bottom: 1em;
+        margin-bottom: 1em;
     }
 
     .topscore h3, .topscore p, .listscore h3, .listscore p {
@@ -127,6 +132,7 @@ export default {
         flex-direction: column;
         width: 100%;
         padding: 1em;
+        margin-bottom: 2em;
     }
 
     .listscore li {

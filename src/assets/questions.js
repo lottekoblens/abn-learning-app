@@ -440,7 +440,7 @@ const vragen = [
     {
         "id": 22,
         "title": "Oh nee!",
-        "question": "<strong>Oh nee</strong>, je komt er net achter dat je partner niet langer met je wilt samenwonen.</p><p>Nu kun je het koophuis niet meer betalen. Ga daarom snel op zoek naar een huurhuis!",
+        "question": "<strong>Oh nee</strong>, je komt er net achter dat je je baan kwijt gaat raken.</p><p>Nu kun je het koophuis niet meer betalen. Ga daarom snel op zoek naar een huurhuis!",
         "buttons": [
             {
                 "text": "Huurhuis zoeken"

@@ -23,6 +23,18 @@ const scores = [
         "coins": 115,
         "avatar": "/avatar4.png"
     },
+    {
+        "id": 4,
+        "name": "Stefan",
+        "coins": 125,
+        "avatar": "/avatar4.png"
+    },
+    {
+        "id": 5,
+        "name": "Thomas",
+        "coins": 125,
+        "avatar": "/avatar3.png"
+    },
 ]
 
 export {

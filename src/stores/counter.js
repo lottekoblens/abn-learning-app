@@ -43,6 +43,9 @@ const useCounterStore = defineStore('counter', {
         return
       }
     },
+    resetMoney() {
+      this.money = 100;
+    },
     loseMoney(amount){
       this.money -= amount;
     }
