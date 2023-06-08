@@ -23,7 +23,7 @@
     <footer class="d-flex score-footer">
         <div class="d-flex">
             <button class="back-button" v-on:click="goToHomepage"><img src="/home-icon.png"></button>
-            <button class="back-button" v-on:click="changeToPanic"><img src="/chat-icon.png"></button>
+            <button class="avatar-button" v-on:click="changeToPanic">Avatar kiezen</button>
         </div>
     </footer>
 </template>
@@ -85,6 +85,7 @@ export default {
         text-align: center;
         text-transform: uppercase;
         color: #7FC7A0;
+        padding-top: 0.5em;
     }
 
     .top-score {
@@ -141,9 +142,10 @@ export default {
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
-        background: #237652;
+        background: #4B9B79;
         margin-bottom: 1em;
         padding: 0.5em;
+        border-radius: 1em;
     }
 
     .listscore li .avatar {
@@ -165,5 +167,13 @@ export default {
     .score-footer div {
         width: 100%;
         justify-content: space-between;
+    }
+
+    .avatar-button {
+        background: white;
+        color: #7FCCAB;
+        width: fit-content;
+        border-radius: 0;
+        background: linear-gradient(-135deg, transparent 10px, white 0);
     }
 </style>
